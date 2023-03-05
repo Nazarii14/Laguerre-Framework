@@ -21,8 +21,6 @@ namespace Program
             return 0;
         }
             
-        
-    
         public static void Main(string[] args)
         {
             var lag1 = new Laguerre(7, 5, 100, 0.1, 2, 4);
@@ -52,7 +50,7 @@ public class Laguerre
     {
         t = _t;
         n = _n;
-        NumOfPoints = _numOfPoints;
+        numOfPoints = _numOfPoints;
         eps = _eps;
         beta = _beta;
         sigma = _sigma;
@@ -100,7 +98,13 @@ public class Laguerre
         n = _n;
         t = _t;
     }
-    
+
+    public static double[] linspace(double startval, double endval, int steps)
+    {
+        double interval = (endval / (Math.Abs(endval)) * Math.Abs(endval - startval) / (steps - 1));
+        return (from val in Enumerable.Range(0, steps)
+                select startval + (val * interval)).ToArray();
+    }
     //@WeaRD276
     public double _laguerre()
     {
@@ -120,9 +124,49 @@ public class Laguerre
     }
 
     //@zbyrachnosochkiv
-    public double _integral_with_rectangles()
+    public double _integral_with_rectangles(Func<double, double> f)
     {
-        return t;
+        int alpha = sigma - beta;
+        SetNumOfPoints(100);
+
+        double[] steps = linspace(0, t, numOfPoints);
+
+        double[] help1 = { };
+        foreach (var i in steps) 
+        {
+            t = i;
+            help1.Append(f(i) * _laguerre() * Math.Exp(-alpha * i));
+        }
+        double res1 = help1.Sum() * t / numOfPoints;
+
+
+        numOfPoints *= 2;
+        steps = linspace(0, t, numOfPoints);
+
+
+        double[] help2 = { };
+        foreach (var i in steps)
+        {
+            t = i;
+            help2.Append(f(i) * _laguerre() * Math.Exp(-alpha * i));
+        }
+        double res2 = help2.Sum() * t / numOfPoints;
+
+
+        while (Math.Abs(res2-res1) >= eps)
+        {
+            numOfPoints *= 2;
+            res1 = res2;
+
+            double[] help3 = { };
+            foreach (var i in steps)
+            {
+                t = i;
+                help3.Append(f(i) * _laguerre() * Math.Exp(-alpha * i));
+            }
+            res2 = help3.Sum() * t / numOfPoints;
+        }
+        return res2;
     }
 
     //@volodia_tech
@@ -132,8 +176,14 @@ public class Laguerre
     }
 
     //@zbyrachnosochkiv
-    public double _reverse_laguerre_transformation() 
+    public double _reverse_laguerre_transformation(double[] lst) 
     {
-        return t;
+        double[] to_return = { };
+        for(int i = 0; i < lst.Length; i++)
+        {
+            n = i;
+            to_return.Append(lst[i] * _laguerre());
+        }
+        return to_return.Sum();
     }
 }
