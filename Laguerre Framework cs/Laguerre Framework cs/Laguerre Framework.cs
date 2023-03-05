@@ -108,7 +108,23 @@ public class Laguerre
     //@WeaRD276
     public double _laguerre()
     {
-        return t;
+        double l0 = Math.Sqrt(sigma) * Math.Pow(Math.E, -beta * t / 2);
+        double l1 = Math.Sqrt(sigma) * (1 - sigma * t) * Math.Pow(Math.E, -beta * t / 2);
+        if (n == 0)
+            return l0;
+        else if (n == 1)
+            return l1;
+        else
+        {
+            double l2 = (2 * 2 - 1 - sigma * t) * l1 / 2 - (2 - 1) * l0 / 2;
+            for (var i = 3; i < n + 1; i++)
+            {
+                l0 = l1;
+                l1 = l2;
+                l2 = (2 * j - 1 - sigma * t) * l1 / j - (j - 1) * l0 / j;
+            }
+            return l2;
+        }
     }
 
     //@ayatsuliak
