@@ -1,0 +1,15 @@
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\Laguerre Framework cs.csproj.AssemblyReference.cache
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\Laguerre Framework cs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\Laguerre Framework cs.AssemblyInfoInputs.cache
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\Laguerre Framework cs.AssemblyInfo.cs
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\Laguerre Framework cs.csproj.CoreCompileInputs.cache
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\bin\Debug\net6.0\Laguerre Framework cs.exe
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\bin\Debug\net6.0\Laguerre Framework cs.deps.json
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\bin\Debug\net6.0\Laguerre Framework cs.runtimeconfig.json
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\bin\Debug\net6.0\Laguerre Framework cs.dll
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\bin\Debug\net6.0\Laguerre Framework cs.pdb
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\Laguerre Framework cs.dll
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\refint\Laguerre Framework cs.dll
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\Laguerre Framework cs.pdb
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\Laguerre Framework cs.genruntimeconfig.cache
+D:\Programming\C#\Laguerre Framework cs\Laguerre Framework cs\obj\Debug\net6.0\ref\Laguerre Framework cs.dll
