@@ -125,7 +125,7 @@ namespace Program
 
         public static void Main(string[] args)
         {
-            string pathRead = "C:\\Users\\Admin\\Laguerre Framework Python\\MyFile.txt";
+            string pathRead = "MyFile.txt";
 
             var parameters = new string[] { };
 
